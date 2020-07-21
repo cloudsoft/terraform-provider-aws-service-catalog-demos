@@ -24,6 +24,8 @@ These PRs provide the following resources:
 * `aws_servicecatalog_launch_role_constraint` (new)
 * `aws_servicecatalog_launch_template_constraint` (new)
 
+Please **vote** for these PRs to help them get merged:  click the "thumbs up" icon underneath the PR description at the PR links above.
+
 
 # To Use These Resources Now
 
@@ -35,9 +37,21 @@ First either:
 * Find and download the file for your OS in the `bin/` directory here, or
 * Get the branch containing all the above from https://github.com/cloudsoft/terraform-provider-aws/tree/f-servicecatalog-launch-template-constraint and do a `go build` in the root
 
-Then copy the resulting `terraform-provider-aws` binary file into `~/.terraform.d/plugins/` and your `terraform` will use it!
+Then:
 
-Please **vote** on these PRs if you'd like to see them merged:  click the "thumbs up" icon underneath the PR description at the PR links above.
+* Copy the resulting `terraform-provider-aws` binary file into `~/.terraform.d/plugins/`
+
+That's it. Your `terraform` should now be able to use the new Service Catalog resources.
+You can check it's installed correctly by looking for the following messages when running `terraform version`:
+
+```
+% terraform version
+...
+2020/07/21 23:21:22 [DEBUG] checking for provider in "/Users/alex/.terraform.d/plugins"
+2020/07/21 23:21:22 [WARN] found legacy provider "terraform-provider-aws"
+2020/07/21 23:21:22 [DEBUG] found valid plugin: "aws", "0.0.0", "/Users/alex/.terraform.d/plugins/terraform-provider-aws"
+...
+```
 
 
 # Remaining Work
